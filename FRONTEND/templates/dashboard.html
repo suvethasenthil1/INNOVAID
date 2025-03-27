@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- AOS (Animate On Scroll) Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - INNOVAID</title>
@@ -9,8 +13,15 @@
 <body class="bg-gray-100">
 
     <header class="bg-blue-600 text-white p-4 flex justify-between items-center shadow-md">
-        <h1 class="text-2xl font-bold">INNOVAID Dashboard</h1>
+        <h2 class="text-4xl font-bold" data-aos="fade-up">Welcome to INNOVAID</h2>
+
+<p class="text-lg text-gray-600" data-aos="fade-left">Track your inventory efficiently.</p>
+
+<a href="signup.html" class="btn" data-aos="zoom-in">Get Started</a>
+
         <nav>
+            <button id="darkModeToggle" class="px-4 py-2 bg-gray-800 text-white rounded">🌙 Dark Mode</button>
+
             <a href="index.html" class="px-4 py-2 bg-white text-blue-600 rounded hover:bg-gray-200">Home</a>
             <a href="#" class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">Logout</a>
         </nav>
@@ -24,6 +35,12 @@
     <footer class="bg-blue-600 text-white text-center p-3 absolute bottom-0 w-full">
         <p>© 2024 INNOVAID. All rights reserved.</p>
     </footer>
+    <!-- Load JavaScript files in correct order -->
+<script src="static/script.js"></script> <!-- Load this first -->
+<script>
+    AOS.init();  // Initialize AOS AFTER script.js loads
+</script>
+
 
 </body>
 </html>
