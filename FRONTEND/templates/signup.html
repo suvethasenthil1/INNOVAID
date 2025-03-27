@@ -26,6 +26,17 @@
         AOS.init();
     </script>
     <script src="static/script.js"></script> <!-- Make sure script.js is linked -->
+    <script>
+        function toggleDarkMode() {
+            let body = document.getElementById('body');
+            let isDark = body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+        }
+    
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.getElementById('body').classList.add('dark-mode');
+        }
+    </script>
     
 </body>
 </html>

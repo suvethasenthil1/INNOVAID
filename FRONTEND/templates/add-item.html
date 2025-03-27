@@ -1,11 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    </head>
-    <body>
-        <script>
-            AOS.init();
-        </script>
-        <script src="static/script.js"></script> <!-- Make sure script.js is linked -->
-        
-    </body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+</head>
+<body style="background: #2C3E50; font-family: Arial, sans-serif; padding: 20px; text-align: center; color: white;">
+
+    <h1 style="color: #F1C40F; font-size: 40px;">📝 Add New Product</h1>
+
+    <form style="max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); color: black;">
+        <label>Product Name:</label>
+        <input type="text" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;" required>
+
+        <label>Expiry Date:</label>
+        <input type="date" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;" required>
+
+        <button type="submit" style="padding: 10px 20px; background: #27AE60; color: white; border: none; cursor: pointer; border-radius: 5px; font-size: 18px;">Add Product</button>
+    </form>
+    <script>
+        function toggleDarkMode() {
+            let body = document.getElementById('body');
+            let isDark = body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+        }
+    
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.getElementById('body').classList.add('dark-mode');
+        }
+    </script>
+    
+
+</body>
+</html>

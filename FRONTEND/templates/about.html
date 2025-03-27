@@ -1,12 +1,27 @@
-<!-- AOS (Animate On Scroll) Library -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Innovaid</title>
 </head>
-<body>
+<body style="background: #ECF0F1; font-family: Arial, sans-serif; padding: 20px; text-align: center;">
+
+    <h1 style="color: #2C3E50; font-size: 40px;">About INNOVAID</h1>
+    <p style="font-size: 18px; color: #555; max-width: 800px; margin: auto; line-height: 1.6;">INNOVAID is a smart expiry tracking system that helps sellers and consumers manage product expiry with AI-powered insights and QR-based tracking. Reduce wastage, stay notified, and make smarter purchases!</p>
+
+    <button onclick="location.href='index.html'" style="padding: 12px 20px; font-size: 18px; background: #e74c3c; color: white; border: none; cursor: pointer; border-radius: 10px; margin-top: 20px;">Back to Home</button>
     <script>
-        AOS.init();
+        function toggleDarkMode() {
+            let body = document.getElementById('body');
+            let isDark = body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+        }
+    
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.getElementById('body').classList.add('dark-mode');
+        }
     </script>
-    <script src="static/script.js"></script> <!-- Make sure script.js is linked -->
     
 </body>
+</html>
